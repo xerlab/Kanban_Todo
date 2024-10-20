@@ -1,0 +1,551 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+
+:root {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: rgba(163, 159, 167, 0.125);
+}
+
+.Cards_list {
+  border: 1px dashed rgb(224, 224, 224);
+  width: 20rem;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.Card {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 9px;
+  width: 18rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.Card:hover {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(238, 238, 238, 0.2);
+}
+
+.Title {
+  color: rgb(73, 73, 73);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.description {
+  color: rgb(173, 173, 173);
+  font-weight: 400;
+  font-size: x-small;
+}
+
+.progress_title {
+  font-size: xx-small;
+  color: rgb(143, 143, 143);
+}
+
+.progress_bar {
+  background-color: rgb(233, 233, 233);
+  width: 100%;
+  height: 0.35rem;
+  border-radius: 5px;
+  margin-top: 0.3rem;
+}
+
+.current_progress {
+  background-color: rgb(86, 190, 55);
+  width: 50%;
+  height: 0.35rem;
+  border-radius: 5px;
+}
+
+.progress_number {
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.Progress_status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TaskLabel {
+  font-size: 0.85rem;
+}
+
+.btn {
+  border: none;
+  background-color: rgb(226, 226, 226);
+  width: 0.75rem;
+  height: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 7px;
+  font-size: x-small;
+  transition: 0.2s ease;
+}
+
+.edit {
+  padding-inline: 1.2rem;
+  margin-left: auto;
+  margin-right: 0.25rem;
+  color: rgb(92, 88, 88);
+}
+
+.edit:hover {
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: rgb(255, 40, 40);
+  color: white;
+  cursor: pointer;
+}
+
+.add {
+  padding: 0.75rem;
+  width: fit-content;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.add:hover {
+  background-color: rgb(35, 184, 47);
+  color: white;
+  cursor: pointer;
+}
+
+.Card_Tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 1rem;
+}
+
+.Task_x {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(245, 243, 243);
+  border-radius: 7px;
+  padding: 0.25rem 0.5rem;
+}
+
+.Task_x:hover {
+  background-color: rgb(231, 228, 228);
+}
+
+.TaskLabel {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.DueDate {
+  background-color: rgb(219, 219, 219);
+  font-size: xx-small;
+  width: fit-content;
+  font-weight: 400;
+  padding: 0.5rem 0.75rem;
+  color: gray;
+  border-radius: 25px;
+}
+
+.Card_list_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: small;
+  padding-inline: 0.25rem;
+  color: gray;
+}
+
+.Kanban_view {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.Projects_list {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  height: max-content;
+  margin: 1rem;
+  width: 15%;
+}
+
+.Projects_list h1 {
+  font-weight: 700;
+}
+
+.Projects {
+  margin-top: 1.5rem;
+}
+
+.Project_container {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: rgb(58, 57, 57);
+  cursor: pointer;
+  padding: 0.25rem 0.55rem;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.project:hover {
+  background-color: rgba(255, 240, 221, 0.7);
+}
+
+.project span {
+  font-size: 1.5rem;
+  color: orange;
+}
+
+.project small {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: rgb(148, 148, 148);
+  margin-left: auto;
+  position: relative;
+}
+
+.Project_menu {
+  position: absolute;
+  margin-left: 10rem;
+}
+
+.Search_Task {
+  display: flex;
+  border: none;
+  border-radius: 15px;
+  margin: 1rem;
+  padding: 0.75rem;
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+.Search_Task:focus-within {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Search_Task input {
+  border: none;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+input::placeholder {
+  color: rgb(196, 195, 195);
+}
+
+input:focus {
+  outline: 0 none;
+}
+
+input {
+  cursor: pointer;
+}
+
+.deleteProject,
+.deleteTask,
+.AddTask {
+  border: none;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  background-color: rgb(241, 236, 236);
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: gray;
+}
+
+.AddTask {
+  margin-left: auto;
+  /* border: 1px solid rgb(86, 190, 55); */
+  background-color: rgba(86, 190, 55, 0.15);
+  color: rgb(86, 190, 55);
+}
+
+.deleteProject:hover,
+.deleteTask:hover {
+  background-color: rgb(255, 40, 40);
+  color: white;
+}
+
+.AddTask:hover {
+  background-color: rgb(86, 190, 55);
+  color: white;
+}
+
+.Status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.Edit_Card {
+  position: absolute;
+  margin-left: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(54, 124, 255, 0.15);
+  border-radius: 10px;
+  color: rgb(54, 124, 255);
+  transition: 0.2s ease;
+}
+
+.Edit_Card:hover {
+  background-color: rgba(54, 124, 255, 0.25);
+}
+
+.popup {
+  height: fit-content;
+  width: 18rem;
+  margin: 1rem;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  background-color: rgba(216, 97, 240, 0.25);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ffceff;
+  gap: 1.5rem;
+}
+
+.popup_projectTitle {
+  width: 100;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: larger;
+  text-transform: capitalize;
+}
+
+.popup_taskTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.popup_taskTitle span {
+  font-size: small;
+  color: rgb(85, 62, 85);
+}
+
+.popup_taskTitle input {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.popup_taskDescription,
+.popup_taskDue {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.popup_taskDescription span,
+.popup_taskDue span {
+  font-size: small;
+  color: rgb(85, 62, 85);
+}
+
+.popup_taskDescription input {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.update_button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem;
+  color: blueviolet;
+  background-color: rgb(199, 138, 255);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.update_button:hover {
+  box-shadow: 1px 1px 3px rgba(117, 62, 117, 0.2);
+  background-color: rgb(167, 101, 228);
+  color: white;
+}
+
+.AddProject {
+  background-color: rgb(255, 188, 63);
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 1.5rem;
+  color: rgb(211, 70, 18);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.AddProject:hover {
+  background-color: rgb(255, 166, 0);
+  color: white;
+}
+
+.SidePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
